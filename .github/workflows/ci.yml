@@ -1,4 +1,4 @@
-name: Markdown Auto Fix
+name: Markdown Auto-Fix
 
 on:
   push:
@@ -9,39 +9,37 @@ on:
 jobs:
   markdown-lint:
     runs-on: ubuntu-latest
+
     steps:
-    - name: Checkout code
+    - name: Checkout repository
       uses: actions/checkout@v4
       with:
         persist-credentials: false
 
-    - name: Set up Node.js
+    - name: Setup Node.js
       uses: actions/setup-node@v4
       with:
         node-version: "18"
 
     - name: Install dependencies
-      run: npm ci || npm install
-
-    - name: Fix Markdown issues
       run: |
-       npx markdownlint-cli2 '**/*.md' --fix || true
+        npm install --save-dev markdownlint-cli2
 
+    - name: Auto-fix Markdown files
+      run: |
+        npx markdownlint-cli2 '**/*.md' --fix
 
     - name: Commit changes
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
         git add .
         git commit -m "chore: auto-fix markdown issues" || echo "No changes to commit"
 
-        - name: Push changes
-           env:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-           run: |
-        git config --global user.name "github-actions[bot]"
-        git config --global user.email "github-actions[bot]@users.noreply.github.com"
-        git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
-        git add .
-        git commit -m "chore: auto-fix markdown issues" || echo "No changes to commit"
-        git push origin HEAD:main
+    - name: Push changes
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        git push https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git HEAD:main
