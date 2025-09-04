@@ -1,8 +1,9 @@
 {
-  "MD013": false, 
-  "MD033": false, 
-  "MD041": false, 
-  "MD012": false, 
-  "MD009": false, 
-  "MD029": false  
+  "MD013": false,
+  "MD033": false,
+  "MD041": false,
+  "MD012": false,
+  "MD009": false,
+  "MD029": false,
+  "exclude": ["node_modules/**"]
 }
