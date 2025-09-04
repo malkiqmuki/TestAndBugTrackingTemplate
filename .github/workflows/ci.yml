@@ -23,7 +23,7 @@ jobs:
 
     - name: Install dependencies
       run: |
-        npm install --save-dev markdownlint-cli2
+        npm install --legacy-peer-deps
 
     - name: Auto-fix Markdown files
       run: |
