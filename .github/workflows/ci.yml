@@ -1,0 +1,29 @@
+name: Validate Template
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    # Примерно: Проверка на Markdown файлове
+    - name: Validate Markdown files
+      uses: avto-dev/markdown-lint@v1
+      with:
+        config: '.markdownlint.json'
+        args: '**/*.md'
+
+    # Запазване на артефакти (например шаблоните)
+    - name: Upload template files
+      uses: actions/upload-artifact@v4
+      with:
+        name: testandbugtrackingtemplate
+        path: .
