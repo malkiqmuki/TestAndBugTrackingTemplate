@@ -1,12 +1,12 @@
 name: Markdown Auto-Fix
 
 on:
-  schedule:
-    - cron: '0 0 * * 0'   # runs weekly (optional)
   workflow_dispatch:       # allows manual trigger
+  schedule:
+    - cron: '0 0 * * 0'   # optional: weekly
 
 jobs:
-  markdown-lint:
+  lint-and-fix:
     runs-on: ubuntu-latest
 
     steps:
@@ -26,11 +26,11 @@ jobs:
       - name: Install markdownlint-cli2
         run: npm install --save-dev markdownlint-cli2
 
-      # 4️⃣ Auto-fix Markdown files (ignore node_modules)
+      # 4️⃣ Auto-fix Markdown files (ignore errors)
       - name: Auto-fix Markdown files
         run: npx --yes markdownlint-cli2 '**/*.md' --fix || true
 
-      # 5️⃣ Configure git
+      # 5️⃣ Configure Git
       - name: Configure Git
         run: |
           git config --global user.name "github-actions[bot]"
@@ -38,14 +38,12 @@ jobs:
 
       # 6️⃣ Commit changes to a new branch
       - name: Commit changes
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git checkout -b markdown-auto-fix || git checkout markdown-auto-fix
           git add '**/*.md'
           git commit -m "chore: auto-fix markdown issues" || echo "No changes to commit"
 
-      # 7️⃣ Push to branch
+      # 7️⃣ Push branch
       - name: Push branch
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -56,7 +54,6 @@ jobs:
         uses: peter-evans/create-pull-request@v6
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: "chore: auto-fix markdown issues"
           branch: markdown-auto-fix
           base: main
           title: "Auto-fix Markdown"
