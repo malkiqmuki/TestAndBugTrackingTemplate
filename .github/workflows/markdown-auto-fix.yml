@@ -1,7 +1,7 @@
 name: Markdown Auto-Fix
 
 on:
-  workflow_dispatch:       # allows manual trigger
+  workflow_dispatch:       # manual trigger
   schedule:
     - cron: '0 0 * * 0'   # optional: weekly
 
@@ -43,7 +43,7 @@ jobs:
           git add '**/*.md'
           git commit -m "chore: auto-fix markdown issues" || echo "No changes to commit"
 
-      # 7️⃣ Push branch
+      # 7️⃣ Push to branch (avoids 403)
       - name: Push branch
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
