@@ -46,8 +46,13 @@ jobs:
       # 7️⃣ Push to branch (avoids 403)
       - name: Push branch
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: git push -u origin markdown-auto-fix --force
+         PAT_TOKEN: ${{ secrets.PAT_TOKEN }}
+        run: |
+         git checkout -b markdown-auto-fix || git checkout markdown-auto-fix
+         git add '**/*.md'
+         git commit -m "chore: auto-fix markdown issues" || echo "No changes to commit"
+         git push https://x-access-token:${PAT_TOKEN}@github.com/${GITHUB_REPOSITORY}.git markdown-auto-fix --force
+
 
       # 8️⃣ Create Pull Request
       - name: Create Pull Request
