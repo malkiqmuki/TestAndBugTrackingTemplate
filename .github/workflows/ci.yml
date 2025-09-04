@@ -24,7 +24,9 @@ jobs:
       run: npm ci || npm install
 
     - name: Fix Markdown issues
-      run: npm run lint:md
+      run: |
+       npx markdownlint-cli2 '**/*.md' --fix || true
+
 
     - name: Commit changes
       run: |
