@@ -8,11 +8,12 @@
 
 ```mermaid
 graph TD
-    A[📄 Test Plan] --> B[✅ Test Cases]
-    B --> C[🐞 Bug Reports]
-    C --> D[🔧 Bug Fix & Verification]
-    D --> E[📊 Reports & Metrics]
-    E --> F[📂 GitHub Repository / Version History]
+    A[Test Plan] --> B[Test Cases]
+    B --> C[Bug Reports]
+    C --> D[Bug Fix & Verification]
+    D --> E[Reports & Metrics]
+    E --> F[GitHub Repository / Version History]
+
 
 ---
 
