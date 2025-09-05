@@ -6,8 +6,6 @@
 
 ## 🖼️ Project Workflow Diagram
 
-```mermaid
-graph TD
     A[Test Plan] --> B[Test Cases]
     B --> C[Bug Reports]
     C --> D[Bug Fix & Verification]
