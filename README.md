@@ -2,6 +2,20 @@
 ![Coverage](https://img.shields.io/badge/coverage-90%25-blue)
 ![License](https://img.shields.io/badge/license-MIT-yellow)
 
+---
+
+## 🖼️ Project Workflow Diagram
+
+```mermaid
+graph TD
+    A[📄 Test Plan] --> B[✅ Test Cases]
+    B --> C[🐞 Bug Reports]
+    C --> D[🔧 Bug Fix & Verification]
+    D --> E[📊 Reports & Metrics]
+    E --> F[📂 GitHub Repository / Version History]
+
+---
+
 # 🐞 Test & Bug Tracking Template
 
 A **professional QA and bug-tracking template** designed for teams and developers who want a **structured way to report, track, and resolve bugs** while managing test cases efficiently.  
