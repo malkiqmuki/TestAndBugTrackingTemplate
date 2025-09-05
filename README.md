@@ -1,50 +1,47 @@
-# 📝 Test and Bug Tracking Template
+# 🐞 Test & Bug Tracking Template
 
-## 📖 Описание
-
-**Test and Bug Tracking Template** е проект/шаблон за:
-
-- Управление на тестови случаи (Test Cases)
-- Документиране на тест планове (Test Plans)
-- Проследяване на дефекти (Bug Reports)
-
-Този проект е създаден, за да улесни QA инженери и екипи при организиране на ръчно и автоматизирано тестване, както и при проследяване на дефекти.
+A **professional QA and bug-tracking template** designed for teams and developers who want a **structured way to report, track, and resolve bugs** while managing test cases efficiently.  
+This project is built with simplicity, scalability, and collaboration in mind.
 
 ---
 
-## 🛠️ Технологии и Формати
+## ✨ Features
 
-- **Microsoft Excel (.xlsx)** – за шаблони на тестови случаи и дефекти
-- **Markdown (.md)** – за документация
-- **GitHub** – за версия контрол и лесен достъп
-- **(По желание)** Google Sheets – за споделяне и сътрудничество
+- 🔍 **Bug Reporting** – Easily document and categorize bugs with rich details.  
+- 📊 **Test Case Management** – Organize and execute test cases with status tracking.  
+- 🗂️ **Customizable Templates** – Adjust fields and flows for your team’s needs.  
+- 🛠️ **Ready for Integration** – Can be adapted for Jira, Trello, or CI/CD workflows.  
+- 📦 **Lightweight & Open Source** – Easy to set up and extend.
 
 ---
 
-## 🔍 Шаблони, включени в проекта
+## 🛠️ Tech Stack
 
-| Файл                    | Описание
+![Markdown](https://img.shields.io/badge/Docs-Markdown-blue)
+![Excel](https://img.shields.io/badge/Excel-Templates-green)
+![GitHub](https://img.shields.io/badge/GitHub-Repo-lightgrey)
+![License](https://img.shields.io/github/license/malkiqmuki/TestAndBugTrackingTemplate)
+
+---
+
+## 🔍 Templates Included in the Project
+
+| File                    | Description |
 |-------------------------|------------------------------------------------------|
-| **TestPlan.md**         | Шаблон за описание на обхват, цели и стратегия       |
-| **TestCases.xlsx**      | Таблица с тестови сценарии: ID, Steps, Expected/Actual Results |
-| **BugReports.xlsx**     | Шаблон за дефекти: Severity, Priority, Status        |
+| **TestPlan.md**         | Template for describing scope, objectives, and strategy |
+| **TestCases.xlsx**      | Spreadsheet with test scenarios: ID, Steps, Expected/Actual Results |
+| **BugReports.xlsx**     | Bug template: Severity, Priority, Status |
 
-✅ Ползи от този шаблон
+✅ Benefits of this Template
 
-Стандартизация на тестовата документация
+- Standardizes test documentation  
+- Easy way to track testing progress  
+- Suitable for small and medium-sized teams  
+- Integrates well with GitHub for change history  
 
-Лесен начин за проследяване на прогрес
+🔥 Ideas for Improvement
 
-Подходящ за малки и средни екипи
-
-Интегрира се добре с GitHub за история на промени
-
-
-🔥 Идеи за надграждане
-
-Автоматично генериране на отчети (PDF/HTML)
-
-Интеграция с инструменти като Jira или TestRail
-
-Добавяне на примерни тестови сценарии и дефекти
+- Automated report generation (PDF/HTML)  
+- Integration with tools like Jira or TestRail  
+- Add sample test scenarios and bug reports 
 
