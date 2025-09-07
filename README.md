@@ -3,7 +3,7 @@
 ![License](https://img.shields.io/badge/license-MIT-yellow)
 
 ---
-![Test & Bug Tracking Workflow](assets/test_bug_workflow.png)
+![Test & Bug Tracking Workflow](assets)
 ---
 
 # 🐞 Test & Bug Tracking Template
