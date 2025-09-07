@@ -49,6 +49,14 @@ This project is built with simplicity, scalability, and collaboration in mind.
 | **TestCases.xlsx**      | Spreadsheet with test scenarios: ID, Steps, Expected/Actual Results |
 | **BugReports.xlsx**     | Bug template: Severity, Priority, Status |
 
+```mermaid
+graph TD
+    A[Test Plan 📋] --> B[Test Cases 🧪]
+    B --> C[Bug Reports 🐞]
+    C --> D[Fixes 🔧]
+    D --> E[Retesting 🔄]
+    E --> B
+
 ✅ Benefits of this Template
 
 - Standardizes test documentation  
