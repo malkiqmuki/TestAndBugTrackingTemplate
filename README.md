@@ -51,10 +51,10 @@ This project is built with simplicity, scalability, and collaboration in mind.
 
 ```mermaid
 graph TD
-    A[Test Plan 📋] --> B[Test Cases 🧪]
-    B --> C[Bug Reports 🐞]
-    C --> D[Fixes 🔧]
-    D --> E[Retesting 🔄]
+    A["Test Plan"] --> B["Test Cases"]
+    B --> C["Bug Reports"]
+    C --> D["Fixes"]
+    D --> E["Retesting"]
     E --> B
 
 ✅ Benefits of this Template
