@@ -6,6 +6,11 @@
 
 # 🐞 Test & Bug Tracking Template
 
+![Documentation](https://img.shields.io/badge/type-Documentation-blue)
+![QA](https://img.shields.io/badge/focus-QA-green)
+![GitHub last commit](https://img.shields.io/github/last-commit/malkiqmuki/TestAndBugTrackingTemplate)
+![GitHub repo size](https://img.shields.io/github/repo-size/malkiqmuki/TestAndBugTrackingTemplate)
+
 A **professional QA and bug-tracking template** designed for teams and developers who want a **structured way to report, track, and resolve bugs** while managing test cases efficiently.  
 This project is built with simplicity, scalability, and collaboration in mind.
 
