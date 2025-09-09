@@ -38,16 +38,47 @@ This project is built with simplicity, scalability, and collaboration in mind.
 | **TestCases.xlsx**      | Spreadsheet with test scenarios: ID, Steps, Expected/Actual Results |
 | **BugReports.xlsx**     | Bug template: Severity, Priority, Status |
 
+---
+
+## ✅ Example – Test Case Template
+```markdown
+# Test Case ID: TC-001
+**Title:** Login with valid credentials  
+**Preconditions:** User has a registered account  
+**Steps:**
+1. Navigate to login page
+2. Enter valid username and password
+3. Click "Login"
+**Expected Result:** User is redirected to the dashboard  
+**Priority:** High
+
+---
+
+🔍 Example – Bug Report Template
+# Bug ID: BUG-001
+**Title:** Login button does not respond  
+**Steps to Reproduce:**
+1. Open the login page
+2. Enter valid credentials
+3. Click "Login"
+**Actual Result:** Nothing happens  
+**Expected Result:** User is redirected to the dashboard  
+**Severity:** Critical  
+**Status:** Open
+
+---
+
 ✅ Benefits of this Template
 
 - Standardizes test documentation  
 - Easy way to track testing progress  
 - Suitable for small and medium-sized teams  
-- Integrates well with GitHub for change history  
+- Integrates well with GitHub for change history
+
+---
 
 🔥 Ideas for Improvement
 
 - Automated report generation (PDF/HTML)  
 - Integration with tools like Jira or TestRail  
 - Add sample test scenarios and bug reports 
-
